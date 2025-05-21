@@ -89,4 +89,13 @@ public function update(Request $request, $id)
     return redirect()->route('pesanan.index')->with('success', 'Pesanan berhasil diperbarui!');
 }
 
+public function destroy($id)
+{
+    $pesanan = Pesanan::findOrFail($id);
+    $pesanan->delete();
+
+    return redirect()->route('pesanan.index')->with('success', 'Pesanan berhasil dihapus!');
+}
+
+
 }

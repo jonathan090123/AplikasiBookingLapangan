@@ -12,3 +12,4 @@ Route::post('/pesanan/store', [PesananController::class, 'store'])->name('pesana
 Route::get('/pesanan/index', [PesananController::class, 'index'])->name('pesanan.index');
 Route::get('/pesanan/{id}/edit', [PesananController::class, 'edit'])->name('pesanan.edit');
 Route::put('/pesanan/{id}', [PesananController::class, 'update'])->name('pesanan.update');
+Route::resource('pesanan', PesananController::class);   
